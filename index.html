@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="queries.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "lbQnKi03BXTOw3MF4",
+        });
+    })();
+</script>
+</head>
+<body>
+    <section class="home">
+        
+    <div class="navBar">
+        <nav>
+            <ul>
+                <li><img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABIFBMVEX///8IClK7wtUluvnl5eUAAFAAAEYAAEoAAEcAAEwAAE4AAEQAtfkAAEkAAEIGCFIAAD4AADzs7Orl5e0AADnb2+YmwP8As/nw+v/19fm95/2hobZ/gJwQt/nb3ObPz9vt7fOJiaLa8v4VFlaF1Pw2N2hszfsAADR0dJSZ2/zAwM6p4P3d3eDCydsAADCoqLskJV1JSnS6uspCwvrB6f3IyNA5Omonxf/S7/6VlawVFlVmZohXWH8WZ6G+vsh3fJ0gnNkfIFsuL2Uej8oafLhNTnahobKrssoQQnxcyPpqa4sLJ2VfX4MrLWtZWogKNHGJttZmkbgaerSWyOhBVYJHruQALm0NP3sTW5YAIGUnYJZFiboSUIsAFV4YcKyGhp0iMxkXAAAZWUlEQVR4nO1cC3fayJJGxq1HCz1AgJF5SBiwMcYRyDa2DHEMNo4h3M29czev3Tz+/7/Yqm6BeWXuzDgDyR59J8eRRKvVn6q7qrq6WrFYhAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIvwx2NtuwN+LUmHY6ZWdP1TWstxf732URY0Sqom90n8qaQc1Il0X/NavRbGsGwLCUGTv98o55UlLJoZBFM3oj90Nte75cOoqJ4gck/nvFwyOJErCcsDS9DfXxmchn1SEOaS/PxgndL6gYOh/bNxuG86TABmI4H6vqC8Ki0UHm2vmM1DQFpstSOP1Ba2haCwVNRubbetfQ1dZarahrm23KyjLBAWtvOnW/hWMlxkKtL2uXCO9XA5Kdjfd2r+CFRkKgr5WiF36/4chqa0pVyIrnVRQ6htv7l9AfZXhWg3i66vlSH/z7f3zKC/rUmz5mpHoy6vlDHXz7f3zyIvrWr7in9ryaieFEfsreKcNdU3LtWClmLmmmKBvo8V/FtY64ZDOcjF/HUP6ZRst/rOwW2RNNyXWcjG6ppj0S1j82GSNMhVE0Ka545O5YlZtleJqZ/4pEaxRpgKBtp8lEtWwTC4Xiw1XGa41nD8fnBWHGvAPsOWJePwMC5wfngGq1xRmyEsMV4brT4l1A5H+Vy8Wq+7tQTc9zxaLccRbagj1BcVr6L9GL13j1RhagP3vAPrmcSLOkb0TDS2Tl9gLYC6qpPe23fQ/iIa63E0NzQkniSHBbLZ4e/uZ0nYB3wZpoTOrBZnttvtPgPBZwxNP2mr8czQaVffPQ4J3H4goQinKxK36ZQm6qLvtdv9xlLHrGXJrjqIoGnfhAMxmL1+qdF7MRl8SSPoXGYMMFvgr5DrfW9A4RvouC0jc3b98VImx0JEN8M1/iQAGA2iTWFcjnW5/aYZrCHcf34tHR0lR6PcrSyEMOvmPseOfBVeJQxBi+x8DaUndGERLq7XJN+/Gae7uNgNNWRAxVX+VXnq1BwxjBbJoE4mkKu1vftNpplK7DJ45ronzUjbUX2KCH+O9tDBvLwwi69eFm13g1hP11g2n6KXzp4Ewz9HQf5GYd+5q/yT5FNWnMhk+cMmlhvr4G9GanGEy2Nk5LfelJ47rY3I/G/ZHxUTiXp9Jj/YeZh2zma6nUjfpgLF9SOZ3gOLOq8pswBqGu+3m/0dcnaFFz96zQIahiO0neoALJNc0C3MMkWNXCcVoSO62CayFU6iDt+VggOWYu9TZexVtvFK/mKOHIK2LZle/2W1e3NwUdM4QOL4eqoT3aHfbZNYhMBWFdq514saqU6f6VieyEewu0kulUg+ahjZC05PptCpNGQLHfF8z0D39GeNQbDJoEAr//pUNJw2378XWw7z44LjpfxsSVZOV60F7Us57jYLpnwK305DjK/Bl6dzUwrbhn719xpavzlQh1V5O+6j47Ul+wO7iYdzS02ZlWH+4uWjCFWy4l7xINV8PXu2chl21LUuFWcV5oV6oUa1f2DJHR11wXMx7kGL2t2TrIjWj1/TGAz2tdgreBSidqWBjjCHonkpaqE85FsQKXyF1y3mdUA18V2WyZYYFbcEzI29xDCZrM/E1H4Y0ne4XbpqpRZ0D7c6bF8ws9tMklONpnhJGyE9OlzQM5fp38wD+foaLk3lDeRfPvtQvOL1df2im583hvNZBhj6XsjcwNc7xNDhiXk3+KdBjELO3RTGWlwIyxpdiPPuR+ywX3wjQ81jP5FhmqL/e2UEfHDkmv5SRYz7NJLYYrNO2F9rw08sLgPLXbCjDm2S6w6SXAiU6GQ57BSC7wDBAhiA3IJnafbhODsqnp6+O2EAcLL449XeyOf5eOCvLY9rLbPYeNchus3CDUkvdTEg6LRtflOSRNrx54jhjiCSRY0DNQb6n2qze5VSHbfVTu7McNRTvsvH79A0fhqhphqYOjhsa+6bf1ZOTeYbq65nF30GO30Sd52KshOrUbWkbW1rppWAu7o78UFQpT1THzmwAxtyxWbmYmYtAnGO4c4rvo65NoFZ3JdxKJ1tiGAuWkykksPm3Rw+cRepbks0F+cQphax8SQopYubbPEMU425TL8esCl1Z3ietbTGM9ZYbo5DE7VGZkUjVk0NQLqmbQnvQqk28XfRkHE1ofofhDujfo3ysrq0sCRiVramaNaFf9bdiks+OgnQP/l50ZIVSRVHkvgcKFIz5YMpQXmaY8o4uYitjW1hwVzeOlQUy9T6udZkSNTsp7KiEisZwPGnJisnCMHUdf95Ff2iFYTn571hdWmG41eCGv7SibZjvsl+GSKElgn6sq4b4eMcWDTP/Leu4/GlLqs/GZEFaYThW4ofvjOVusd3YxnJyIbnPZt8z4aVh+vRNNKS74jEreZL9TVTRnpdF+B0c04KywrDzBhz3l0urj3Rl9XiTWLbN2m+X8ezjNWhF2kmlbkRDvc3yNdFqET1WlIalwiQfGNbpIsPT3RT9kI1nPy9Zw99J3twAbGNxHKLFz36Um6Bm/FRqQMy77IgVHGF44/ILyx/tSDASVxk6u7v6R7j9cbFbaNudW8QaujZnEw36DrrZ12Qz1QeN6evK58viAZTKjXj85i6NI7EuEWQ4JssMnaOvKzI06LZX3DKF7tO4wV4GU/yjCyddSKXaVHtXZH00JBiPi6j3A01vMoaLw7C06x9hF/i6mHAkbzM7I3fF/hvO9Lt0exm/vfsf039IgjOj0sds8RzL7U1Xfd8MwOp7IgxEO9Y1Fhk2Uw/m/W3xMj6X0GcIJLnFYXiQSLC8g9ynMEXI+PTbG0ETFdGrK83dC128z3IZXk0ZPvZtTH0WPWA4EZYZFhRNE95/fTNlSEUpbVywVYLtANTjHkrxJPtREXm8U2PvXwvaLXBQVPE2Hi/iMk3sJIyjPraYDOWH1CrD3RQuNxpk6rUZkuLHrNhVce9sWxz394pFfPZZPFu8ezunVGlhACbvQZSAYTyBL+EqZPgGzUWgAUPwaSvLDOcnvpr45X/QDubi07e0WTixHgyP/epB2Ib45d2cc0N6wBBkyBgyZRrKMM7Wz+qK6u+uMARzODcAlbvb+CW+vgO88yzmj2MbXUB1jwrj/nTezeRz+2XO9JMOyvBGF2+z8QRz2abW4gUYN7tG9AtgOLxeNBap5tysgoB3E2ed86x4WazaamGsbZKhE6S7SiFWaruxUD6VhaXOfqcFnqku/8Z16bSTXr7FdQlLNVT0S9tLDHcv5lOp6KdsvHh2grb0UxXGbDftb1CpWi/qPeVL0gnolOHbRU+LDCm43W3pbZXriGmw/whj2oFMailk2F80h6nF7SXSI9jWxNlBzH7h+2pFG/debDBa49OWYdD+sMXXm7Ifl7KCta55g91U5a/9MByFXwi+EYHKwRqG4OktutziV7YMcmCne31qVPrXm5ThoI2dktBrN3YAQ+x2ORdWDHCNMNXT+nNLbvG3L3Ce58GEqonRxM4iw93UcniZKar4mWtiWMMw2sLmGMZ8PVzuS+0X2fBaYqg9dCoYURS0jh0SvEy8OcJcCxsm/JPUWobLIRHpIwox8e8kH5jSRp0bm2VakM5JAhO4VsKmtO4fQU9MOdey9K8Epgm9+5jmIcGuYsgXLCJcay0Zi5X4hc6EGGfV086GY6YOSpGiMohn369EVkg7NaAYr2925aT29vPjp3Syx+YIeZgT19kEODZonS4Yi93VIOIHVj+mxxHl3T7eXx0dbIqiL8hcGYRr9otNq6Ru9DaLR10Uhn2j3y7wLuaJBuk3d9cxhD69EmQz7+K4DgIPqtxmMb34KlEcbYphzA6AGUzh45XVhGBDATc6XWcLufhn2sEC0TD0Gx6IirUG8wzBU1/OoQLJfcpm0VnS7+NoOo7Bw9mr/k6bfjSgVxla8eu6/SPixW5qYi6tbtoTHQh6qd21DFPrttCI97cwwVY+8OVzcHFz55til8vlYv80MVMrVIB0QdXLwCPV1q/nwoB2niowcXiYhrxj/QWGu6mHeXM4zT+h4OeEZgNc3M310P1DeN7o8vNTm+TP9/MaVfmGRHqq3gkyrm27VqMuQFtJLVx9wtjw9QLDVKowFyiV7x+f3pj2MsyAYF7835C84JTrM7AvCORGYSZ6UZhaMO0xm32cayGdMCbfVEUWK4NaS1HZIg7p+TyDAVtZqc0xBGPRflKl2sfL4syVZ054yPC8NK4N2sGPJdnVJWUGTa/DbGkadZlaQkX/wPjOTQ146D51MTQ1ApjN2mXhIVQ0sS/zDJ3UgyhQ0zSRJq2AgpGnp+btjGH2f0WFECq23B9IsKwb9IkhMcz8WfzpiV91QhT1c5bZrbunTmvQ5jRXIagRsGaaJgJkahAW1Meajc4cwyZ4NLTnOE6Nc8p+VkgbTtuUfr6cPe/ONIgsKgat/UApEkynn6FD6Rc2KJAT/vv65s3HW9aEbPz2zZMQZX+6bAhNJ4NCkPcbzoXXJVQQv6UYQ6V9uvP69WuehoHUVNRLZUVQPmfjl49UwwWnvEg+XGanmUhvCKl4TkEyfuCSqQU+yFxQvaQLYjHLUu3ffPgK3ecy++727u62mM3evlHn1CmQYkkKzWazRcQnj7LUVgzpYtd1Y47ZnVQopa1Xp4DX+QHlDCVBimeLt++nDI1PX1/ewzOzmEsmsJByXaETu9RoOD9i2l9SKZvyTAnrMDV9Gb98abLPery/vX9PsPsJj3ciMchcXjBRZNqpd66vrw1jjmHMFii57l9fd8ALVQwAEXuvJgOqESFkSD/fvaUiEUKGYHM1UbnLvnxTgQmGgXU4piG0ZHisMig8e00jo5LKIkODio+3KjRMA0qyzHgRuAgTxtagrwgG6hWQDcFkN/iJLjLENuNleBmGIIkyUKEKZbXooQwNXqkcyhDqgrrfy1iTIeIALJkCeyrULz07OdxRSR8Z+hxdSZIVAR5Fao2gA+6Gocj9Wu0ag4nsIyYTUakNFKVXH7PAGZE1TeEM/fq4zBItTIFqmobGQypYVglnFIYkt2o1xeMMw0qFgL+P7rgLjiFIHO4iSs9iVRBRqNVaErwL85kxcWCIYWpX0VWEJhQyXZCTIOL7DmRDrWNeqet3JIF9OKGOewo8XHZ3ZGjWIJMpjRXGsKwrJgYxMiYdljKZIVBU+aASiFZgtdicIVXHeGrjm80nWeADtLQyLmWcjmK2bfDfad8DpnYpaFFDdJ/FsKES1MwuqFRJE+kAanN1I0x1zYvadBeI3VMYQ+amNXCLXUaDXojNa4icYVI8wn7nqbz7QaP5OwELN9eLy5Ihzfl6ebaRxpMFPkpfVXDc1Vg7GKwKfeb3UIBh2yrZbq03Lgdeu4KveayEm89rc8vPtvz08QtvHcNGkGcFBkRkDOUZw4UmliV1fk17iWEdV3bqmsgf5ZYaGbAcz1uc8lUyzLx+fWpZbAy9wMaVVEPEIWOlWQaB5bNHBOkZw2AdwxBjTVhiKPJNbaG/WRYn86dLDAtiuU41WrFty/a8TClT1p77jQJfpL3Ma98H0/zad5wkDsrYhCZd9nR8qP/iBeOdecEYOvV6vt3+LkNrLNMlhmyN1+0RUmOdmX19wR7DaWMNQ0kC9UZa1uvX1iD9olYm/GU/AzCoJyWmRjHHzjFFz3EyDZXt1q1paHE9z8EvdcXsI2xRCXSnrHyfIZxKSwzZDvy2hlNHZKjiSBuLoEGCJYa25fL5h2GU/Map5Xh1XXn2917yMu2WdnasjNNo+PkOvFlrx7c6eef0tKRWLPfJP+QMceLPRyky1OYYOp7Ho9ZeGhkGM4YE/rgYMOT2kGKVuHWPW3xg6LrIUG+c7mTCGZaWt3Ya8MZL1lB5ri4NNGVsnZ46aVUVwcZjM5xTxy81TjOe2C/tNBqnTgbHqJ1n45A1gTEsAUM9H5vTpbLIzIUtM+Fgo50ZQ9ySydZCOUOcjKh+yckAQ6fh+CpMtTOnp1OGhpx3Mw56ey74hM/rpoGk1C3w8XXmQxA0cS7UC5fcNlXgB6fk5QuTgXgkqg3ntBQyhA5l10SxD7PfGUMNtyRi82vI0Ic5C/OW6iZqla5KtYFdKrllNeM4VlmnWh8eggzhvCRpehdOS9NZMk1XAscqQcmC8swPvpQVzhB8DAQMc72RQWJOBkaKD4eZ1pFp0rKnqvCDxZpA+66DzQxK+DsyxDOUYRd+sGoBNM3tia0GNhE0DcAt9NhzLNA0cJNb7o3ZzXmzAJctp+CxKkOGtOd10i9UeHwp0J750Z6CIrFHhIDuAh6AkwEuHviXE3hsxvUDD4xJR58xFHQLimQsGL3wHzIE18YJ8vmGi3dqdfgv45YsLOXWVX7q4t8MyLCLBxY/LeXVDh5AWTwNqwc30HWh75RKGffVc2VYp8AQ7E4I9LzVhoVV9yg7nD7e8o/gJFR2WuCyeyzbKlnIsISFwAnFa54q2PBrCa8hQ0UsQYVwipfcsiQ7VoaflTJWXtQdPIBfsA/z6sGRZE+Fy+7gueOwS7WyW5oBGOIogwML02jwZVr8BztIX1hhE0DxOzYQsp2CyxkiO17OLYlgB2zeJYCaDV7bteXimQ11AUNw4tipC39dmAELeGDZD741tRakE95v2WXRUJ83gcLJpvUEXOIzNOiUbsCim4ZeLoE2sd2Lng6vwrLAoSY1oGjWG5lGPVkAlYMMbZcBXJE8U8h5vMlp4R1tIhAaYJcdeuBsfwOXUCzj6aRsuzaoXKIFTsYbvmi4lh2OQ6XTsHDLkFVXBe2ZG09B5Sm0MgNbhzYUOJoG1jSt3R33+hg2VYQKKn06aRlSweu/ODLTDWAFblE7zxAUJgJf5xVb3XFHJFKF3QHaX64QVRlAEYygG5ooEFVqBfmgRQTdK2tQFwGh2tMMcKJe98bjtiIJSv+5IZuObMyDmyNjLkPSIIoSfmmGXzb60HtBRpl8HmVn43xIkxGaNNuET6iCNm9WETsgmqzRxVOCHxq03UY+b2Fdw6dNVhTjYgKtuc8kiP103eecOJTVfF7WPFDgbN8Z/rHXfIXmz0D1YrOqwItY2sYv/ohQzXB5/XMmCK3cXvOtHULY7gHWJDv04xZatfSZtpWM2UXMf0qip0AHmX9hYuG7zf4T8PWl19YLs0JIxXbbc5vz+KNJq0fJtR+ODjtY/lYNETsLueqGRBd6iSIvypx2pn67O5EF029Is+KG/oO+0BfoqjiDmqzH8uyCzqbmAdEljAmJ5rBjwlVTKDmaQcRB3Ws0vEKLpbzNRhuRzJYP83uVYiQZq1H1fGmi61AdSxwjybLfMlW4rDzFydsFrKtrKIIEM9JSV1cVeKSi0x+Wwm95+Rm80vRCKCbbLwwHnXEerjfwKlzCPAaiyKIoK+F6v6ojVFIrsEmkm5/UOnU/A9VgvCXm+nBjvgJFKmi+4brXGMu6roTvBevSFDBEXHG6Xr09aNf952rRv46llIO/HmdY/uDU9rZ4LcFbHLniX7bJpcWKlE1nK3wfdfNJWxjP+TKSZz51B0MbbDNpfwn+F1PBGDUlqvisoLTTTmq8Is0c/zQSZGgUaoSSSs97brMyQfsLcGwHP5EAI0T4GbC//5RbfrC/Hx5d7a9mZB3sszTv/f398/DHHBzvX83uPzkcjY752f7okB+ch9XnwuewWxh+OJPv4GRv73h2Ek/s8Q9a5vjmhCv25cBcgn1LKVZMxHOx3F4CsBc/4TfjSfiFyAOW1VHkqdKHRZ6yfrwXJj5V9xIsg2aUCLE3/+nMvxP7ieLsUVeYncgZ8s8+wo/HuBcjnsD0pSJeywENpMJonSSejjFNPcHOUDqH/H+4yHdp5M7CTH+gzl5EcSsMq9j6/XUMMRMduI0Yw7NqNQstv0KGxVF1VIwncix5+Gz/4Bzz3DlDvAd4hftQiuFGhPNqtcqqqG5q48U8Q5YkcbaWIbTugOUScp4oiioyREEdFjFJbZaPzwR+yLZWYMItZwisinwzA/b6+OZSvhYYQic9HMX57qYVGRbPD9jQChnCyYgxhJtH2P9ASHyvyAm7h8mwyGgxhtl48TgR7ibZHsNqsXhyxQbbCsMRtPc8gY0NGfL/YByenSEP6H1FTiU8AIZcgJzhFZKCkXiwXYbQoJPzOBPilGExZFg9AebxOYYnTKAn/EtLWMOTDItchsUDeGPVK04cDg/Pp/p1awxRkxaxySO+OyjG2skZHsZQinjCGB4cc5WEujQxk3qcSeiM6UxkmBuNciHDsM8ylbR5hvGzw+rxPlMGib29vUSc641iFV76E0M0Bvgu0Fqwjom0cMzlQDT4jnAjxsnV/tlUl3K1whke7MWLrGpGd8MMT7h1SqBmL+4fHBwcs+cjObRuiSlDLMj6b5HLg7WRaZoc58Q2piVQTucrDLG/5g4OrqBEbuMMr1h7i0U0BthQTMjcA+N3hpYZOiOa7T02fkYJ3KGYQ95nh3zHKThE+7jLBN9D7CCL9RTjzKAeJrhW4eopXmTWHq4yHyl0bzaFXA7f7kEsVx3xAXl+gq3J7R+f5NiXuuGXQ2ZBzlkrr64OZrY6d85+GIWE96uH1ZPQDeWF8V70DEahnTg+x5+vzre3lTRChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRIkSIECFChAgRNon/A1EUEzfPXOoPAAAAAElFTkSuQmCC"
+                     alt=""></li>
+                <li class="liItem"><a href="#">Home</a></li>
+                <li class="liItem"><a href="#services">Services</a></li>
+                <li class="liItem">About Us</li>
+                <li class="liItem"><a href="#footer">Contact Us</a></li>
+                <li class="userName">Username</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="left">
+           <h1>Revitalize Your</h1>
+           <h1>clothes with Expert</h1>
+           <h1 class="blue">Laundry Services</h1>
+           <p class="p1">From premium dry cleaning to swift wash and fold, we deliver
+             <br> care and convenience. Schedule a pickup and rediscover the
+             freshness <br> of your clothes today!</p>
+             <a href="#services"><p class="p2">Book a service today!</p></a>
+        </div>
+         <div class="right">
+            <img class="adImage" src="https://img.freepik.com/free-vector/self-service-laundry-equipment-accessories-cartoon-background-composition-with-washer-folded-clean-bedding-hanging-shirts-vector-illustration_1284-67589.jpg?w=360"
+             alt="">
+         </div>
+    </div>
+    </section>
+    <section class="services-over-view">
+        <div class="main">
+            <div class="h3"><h3>Our Acheivements</h3></div>
+            <div class="noOfServices">
+                <p>15+</p>
+                <p>laundry services</p>
+            </div>
+            <div class="noOfCustomers">
+                <p>1000+</p>
+                <p>satisfied customers</p>
+            </div>
+            <div class="experience">
+                <p>10+</p>
+                <p>years of experience</p>
+            </div>
+
+        </div>
+    </section>
+    <section class="services" id ="services">
+        <div class="grid-container">
+            <div class="grid-item">
+                <h4 class="grid-title">Our Services</h4>
+                <p class="subtitle-h4">click on the add button to add services to your cart</p>
+                <ul class="grid-list">
+                    <li class="li-item">
+                        <p class="service">Dry Cleaning</p>
+                        <p class="sign">$</p>
+                        <p class="price">50</p>
+                        <button class="li-btn" id="li-btn-1" onclick="addItem1()">
+                            Add Item
+                        </button>
+                    </li>
+                    <li class="li-item">
+                        <p class="service">Wash & Fold</p>
+                        <p class="sign">$</p>
+                        <p class="price">40</p>
+                        <button class="li-btn" id="li-btn-2" onclick="addItem2()">Add Item
+                        </ion-icon></button></li>
+                    <li class="li-item">
+                        <p class="service">Ironing</p>
+                        <p class="sign">$</p>
+                        <p class="price">2</p>
+                        <button class="li-btn" id="li-btn-3" onclick="addItem3()">Add Item 
+                        </button>
+                    </li>
+                    <li class="li-item">
+                        <p class="service">Stain Removal</p>
+                        <p class="sign">$</p>
+                        <p class="price">10</p>
+                        <button class="li-btn" id="li-btn-4" onclick="addItem4()">Add Item 
+                        </button>
+                    </li>
+                    <li class="li-item">
+                        <p class="service">Leather and Suede Cleaning</p>
+                        <p class="sign">$</p>
+                        <p class="price">20</p>
+                        <button class="li-btn" id="li-btn-5" onclick="addItem5()">Add Item
+                        </button>
+                    </li>
+                    <li class="li-item">
+                        <p class="service">Wedding Dress Cleaning</p>
+                        <p class="sign">$</p>
+                        <p class="price">200</p>
+                        <button class="li-btn" id="li-btn-6" onclick="addItem6()">Add Item
+                        </button>
+                    </li>
+                </ul>
+                <div class="list-text"><p><ion-icon class="list-icon" name="information-circle-outline"></ion-icon>Add items to cart and book now.</p></div>
+            </div>
+            <div class="grid-item-2-3-container">
+                <div class="grid-item-2">
+                    <h4 class="added-items-title">Added Items</h4>
+                    <div class="added-items-specs"><span class="s.no">S.No </span> <span class="service-name"> Service Name </span><span class="service-price"> Price</span></div>
+                    <ol class="added-items" id="added-items">
+                        <!-- Added items will appear here -->
+                        
+                    </ol>
+                    <div class="total-amount"><span class="total-title">Total Amount</span><span class="total-sign">$</span><span class="total-price" id="total-price">0</span></span></div>
+                </div>
+            <div class="grid-item-3">
+                 <h4 class="form-title">Book Service</h4>
+                <form class="booking-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="newsletter-input" id="fullName" name="fullName" required>
+                 </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="newsletter-input" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="newsletter-input" name="phone" required>
+                </div>
+                </form>
+                <div id="submit-btn">
+                    <button type="submit" class="book-btn newsletter-button" onclick=" sendMail(); submitAlert()" >Book Now</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="quality-description">
+        <div class="mother">
+            <div class="element">
+                <img class="description-image" src="images/laundry-machine.png" alt="">
+                <h4 class="description-title">Permium Services</h4>
+                <p class="description-text">We use the latest technology to ensure your clothes are cleaned
+                    to the highest standards.</p>
+            </div>  
+            
+            <div class="element">
+                <img class="description-image" src="images/support.png" alt="">
+                <h4 class="description-title">Quick Support</h4>
+                <p class="description-text">We use the latest technology to ensure your clothes are cleaned
+                    to the highest standards.</p>
+            </div>   
+
+            <div class="element">
+                <img class="description-image" src="images/fast-delivery.png" alt="">
+                <h4 class="description-title">Hassle Free Delivery</h4>
+                <p class="description-text">We use the latest technology to ensure your clothes are cleaned
+                    to the highest standards.</p>
+            </div>   
+
+            <div class="element">
+                <img class="description-image" src="images/best-price.png" alt="">
+                <h4 class="description-title">Best Prices</h4>
+                <p class="description-text">We use the latest technology to ensure your clothes are cleaned
+                    to the highest standards.</p>
+            </div>   
+        </div>        
+    </section>
+    <section class="newsletter-subscription">
+        <div class="newsletter">
+            <h3 class="newsletter-title">Subscribe to our Newsletter</h3>
+            <p class="newsletter-text">Stay updated with our latest offers and services. Subscribe to our newsletter!</p>
+            <form class="newsletter-form">
+                <input type="text" class="newsletter-input" placeholder="Enter your name" required>
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+        <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/logo.png" alt="Logo" class="footer-logo-img">
+                <p>Your trusted laundry service provider. Quality care for your garments since 2020.</p>
+            </div>
+            
+            <div class="footer-about">
+                <h4>About Us</h4>
+                <p>We provide premium laundry and dry cleaning services with eco-friendly solutions and professional care.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Important Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><ion-icon name="location"></ion-icon> 123 Laundry Street, City</p>
+                <p><ion-icon name="call"></ion-icon> +1 234 567 890</p>
+                <p><ion-icon name="mail"></ion-icon> info@laundryservice.com</p>
+            </div>
+            
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Laundry Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+</body>
+</html>

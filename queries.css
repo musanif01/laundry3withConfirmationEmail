@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+    }
+    .left {
+        margin: 20px;
+    }
+    .adImage {
+        margin: 20px;
+        height: 300px;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .logo {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .userName {
+        margin: 0;
+        margin-top: 10px;
+    }
+}
